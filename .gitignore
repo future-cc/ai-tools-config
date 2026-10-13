@@ -1,0 +1,6 @@
+.DS_Store
+multica/restore-report-*.md
+**/*.token
+**/*.key
+**/*credentials*
+**/*cookies*
