@@ -10,9 +10,6 @@ model: claude-sonnet-5-5
 runtime_type: Claude
 observed_runtime: Claude (MacBook-Pro.local)
 access: personal
-concurrency: UNKNOWN
-skills: UNKNOWN
-mcp: UNKNOWN
 may_modify_business_code: false
 last_verified_at: 2026-10-13
 status: verified

@@ -10,9 +10,6 @@ model: opencode-go/glm-5.3-flash
 runtime_type: OpenCode
 observed_runtime: Opencode (MacBook-Pro.local)
 access: personal
-concurrency: UNKNOWN
-skills: UNKNOWN
-mcp: UNKNOWN
 may_modify_business_code: true
 last_verified_at: 2026-10-13
 status: verified
