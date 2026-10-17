@@ -11,8 +11,8 @@
 
 ## 文件
 
-- `agents/`：六个智能体的独立配置、模型和完整 System Prompt。
-- `squad.md`：个人开发工作流总队的成员、角色和指引。
+- `agents/`：十个智能体的独立配置（含个人开发工作流的 6 个和调研方案小队的 4 个；文件名与 Multica 网页中的名称一致）、模型和完整 System Prompt。
+- `squads/`：两个小队（个人开发工作流总队、调研方案小队）的成员、角色和指引，文件名与 Multica 网页中的小队名一致。
 - `workflow.md`：完整工作流规范，作为流程唯一真相来源。
 - `restore-guide.md`：新电脑恢复步骤、安全规则和验证清单。
 
@@ -26,6 +26,10 @@
 | 方案与实现审核员 | `opencode-go/gpt-6-luna` | OpenCode |
 | OpenCode 执行工程师 | `opencode-go/glm-5.3-flash` | OpenCode |
 | 通用测试员 | `opencode-go/glm-5.3-flash` | OpenCode |
+| 方案评审总管 | `claude-sonnet-5-5` | Claude |
+| 方案调研师 | `claude-opus-5-5` | Claude |
+| 方案评审员 | `claude-opus-5-5` | Claude |
+| 方案文档师 | `claude-sonnet-5-5` | Claude |
 
 当前实测设备名为 `MacBook-Pro.local`，不能机械复制到新电脑。恢复时按 Claude 或 OpenCode 运行时类型选择新电脑上的在线实例。
 
