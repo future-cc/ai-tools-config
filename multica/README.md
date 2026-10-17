@@ -20,7 +20,7 @@
 
 | 智能体 | 模型 | 运行时类型 |
 |---|---|---|
-| 实施总管 | `opencode-go/glm-5.3-flash` | OpenCode |
+| 实施总管 | `claude-sonnet-5-5` | Claude |
 | 实施架构师 | `claude-sonnet-5-5` | Claude |
 | 实施审核员 | `opencode-go/gpt-6-luna` | OpenCode |
 | 实施工程师 | `opencode-go/glm-5.3-flash` | OpenCode |
