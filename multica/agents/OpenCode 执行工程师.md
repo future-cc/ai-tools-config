@@ -11,8 +11,8 @@ runtime_type: OpenCode
 observed_runtime: Opencode (MacBook-Pro.local)
 access: personal
 may_modify_business_code: true
-last_verified_at: 2026-10-13
-status: pending_platform_sync
+last_verified_at: 2026-10-18
+status: verified
 ```
 
 ## System Prompt
