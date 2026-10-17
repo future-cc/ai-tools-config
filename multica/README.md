@@ -11,8 +11,8 @@
 
 ## 文件
 
-- `agents/`：十个智能体的独立配置（含个人开发工作流的 6 个和调研方案小队的 4 个；文件名与 Multica 网页中的名称一致）、模型和完整 System Prompt。
-- `squads/`：两个小队（个人开发工作流总队、调研方案小队）的成员、角色和指引，文件名与 Multica 网页中的小队名一致。
+- `agents/`：九个智能体的独立配置（含个人开发工作流总队的 5 个和调研方案小队的 4 个；文件名与 Multica 网页中的名称一致）、模型和完整 System Prompt。
+- `squads/`：两个小队的成员、角色和指引，文件名与 Multica 网页中的小队名一致。调研方案小队负责调研和选方案，输出 `HANDOFF.md`；个人开发工作流总队以它为输入，由架构师做技术设计，再审核、执行和测试。
 - `workflow.md`：完整工作流规范，作为流程唯一真相来源。
 - `restore-guide.md`：新电脑恢复步骤、安全规则和验证清单。
 
@@ -21,8 +21,7 @@
 | 智能体 | 模型 | 运行时类型 |
 |---|---|---|
 | 工作流总管 | `opencode-go/glm-5.3-flash` | OpenCode |
-| 调研与可行性分析师 | `claude-sonnet-5-5` | Claude |
-| Codex 规划师 | `claude-sonnet-5-5` | Claude |
+| 架构师 | `claude-sonnet-5-5` | Claude |
 | 方案与实现审核员 | `opencode-go/gpt-6-luna` | OpenCode |
 | OpenCode 执行工程师 | `opencode-go/glm-5.3-flash` | OpenCode |
 | 通用测试员 | `opencode-go/glm-5.3-flash` | OpenCode |
