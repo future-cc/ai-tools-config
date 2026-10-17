@@ -7,7 +7,7 @@
 - 名称：个人开发工作区
 - 当前 Slug：`cordelia-r7rs`（换工作区后可以变化）
 - 所有者：Kane Kane
-- 当前配置核验日期：2026-10-13
+- 当前配置核验日期：2026-10-18
 
 ## 文件
 
@@ -22,9 +22,9 @@
 |---|---|---|
 | 实施总管 | `claude-sonnet-5-5` | Claude |
 | 实施架构师 | `claude-sonnet-5-5` | Claude |
-| 实施审核员 | `opencode-go/gpt-6-luna` | OpenCode |
-| 实施工程师 | `opencode-go/glm-5.3-flash` | OpenCode |
-| 实施测试员 | `opencode-go/glm-5.3-flash` | OpenCode |
+| 实施审核员 | `claude-sonnet-5` | Claude |
+| 实施工程师 | `claude-sonnet-5-5` | Claude |
+| 实施测试员 | `claude-sonnet-5` | Claude |
 | 方案评审总管 | `claude-sonnet-5-5` | Claude |
 | 方案顾问 | `claude-sonnet-5-5` | Claude |
 | 方案调研师 | `claude-opus-5-5` | Claude |
