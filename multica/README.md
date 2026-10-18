@@ -11,8 +11,8 @@
 
 ## 文件
 
-- `agents/`：十个智能体的独立配置（含开发实施小队的 5 个和调研方案小队的 5 个；文件名与 Multica 网页中的名称一致）、模型和完整 System Prompt。
-- `squads/`：两个小队的成员、角色和指引，文件名与 Multica 网页中的小队名一致。调研方案小队负责调研和选方案，输出 `HANDOFF.md`；开发实施小队以它为输入，由实施架构师做技术设计，再审核、执行和测试。
+- `agents/`：十五个智能体的独立配置（含开发实施小队的 5 个、调研方案小队的 5 个和测试小队的 5 个；文件名与 Multica 网页中的名称一致）、模型和完整 System Prompt。
+- `squads/`：三个小队的成员、角色和指引，文件名与 Multica 网页中的小队名一致。调研方案小队负责调研和选方案，输出 `HANDOFF.md`；开发实施小队以它为输入，由实施架构师做技术设计，再审核、执行和测试。
 - `workflow.md`：开发实施小队的工作流摘要，便于快速了解流程；具体规则以各智能体指令和小队指引为准。
 - `restore-guide.md`：新电脑恢复步骤、安全规则和验证清单。
 
@@ -30,6 +30,11 @@
 | 方案调研师 | `claude-opus-5-5` | Claude |
 | 方案评审员 | `claude-opus-5-5` | Claude |
 | 方案文档师 | `claude-sonnet-5-5` | Claude |
+| 测试总管 | `claude-sonnet-5-5` | Claude |
+| 测试分析师 | `claude-sonnet-5-5` | Claude |
+| 测试用例师 | `claude-sonnet-5-5` | Claude |
+| 测试执行员 | `claude-haiku-4-5-20251001` | Claude |
+| 测试排查员 | `claude-sonnet-5-5` | Claude |
 
 当前实测设备名为 `MacBook-Pro.local`，不能机械复制到新电脑。恢复时按 Claude 或 OpenCode 运行时类型选择新电脑上的在线实例。
 
@@ -40,6 +45,7 @@
 已成为工作流依赖、恢复时必须设置的项：
 
 - 实施工程师的并发必须为 `1`，防止多个开发任务同时修改同一仓库（见 `agents/实施工程师.md` 的 `concurrency`）。
+- 测试执行员的并发必须为 `1`，一台设备同一时间只能跑一次测试（见 `agents/测试执行员.md` 的 `concurrency`）。
 
 ## 安全
 
