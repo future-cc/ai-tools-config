@@ -46,6 +46,7 @@
 
 - 实施工程师的并发必须为 `1`，防止多个开发任务同时修改同一仓库（见 `agents/实施工程师.md` 的 `concurrency`）。
 - 测试执行员的并发必须为 `1`，一台设备同一时间只能跑一次测试（见 `agents/测试执行员.md` 的 `concurrency`）。
+- 测试小队 5 个智能体的指令里写死了 maestro-testing-kit 的本机路径 `/Users/future/Documents/workspace/company_otherspace/test_workspace/maestro-testing-kit`。换电脑恢复时，要把指令里的这个路径全部换成新电脑上的路径；路径不存在时，智能体会停下并提醒用户。
 
 ## 安全
 
