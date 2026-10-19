@@ -10,6 +10,9 @@
 - `claude-code/`：Claude Code 配置。`skills/quick-fix/` 是快修简单 App 缺陷的 skill（`/quick-fix`），不满足快修条件时整理成交给 Multica 缺陷修复小队的任务描述；使用前链接或复制到 `~/.claude/skills/quick-fix/`。
 - `cursor/`：Cursor 配置预留目录。
 - `shared/`：多个 AI 工具共用的原则和模板。
+  - `shared/skills/`：通用 skill（`SKILL.md` 格式，Claude Code、Codex 等支持该格式的工具都可用）。
+    - `figma-restore-init/`：Figma 还原 skill 的生成器。在项目根目录运行，识别当前工具并确定技能目录，原样复制固定的还原工作流（`workflow.md`），扫描项目并向用户确认后，生成项目级 `figma-restore/` skill。
+    - 安装：整个目录用 `ln -s` 链接到对应工具的用户级技能目录（以便读到同目录的 `workflow.md` 和 `template/`），例如 Claude Code 为 `~/.claude/skills/figma-restore-init`；Codex 为 `~/.agents/skills/figma-restore-init`（以 Codex 当前文档为准）。
 
 ## 安全规则
 
