@@ -7,7 +7,7 @@
 - `multica/`：Multica 智能体、小队、模型和工作流配置。
 - `codex/`：Codex 配置预留目录。
 - `opencode/`：OpenCode 配置预留目录。
-- `claude-code/`：Claude Code 配置预留目录。
+- `claude-code/`：Claude Code 配置。`skills/quick-fix/` 是快修简单 App 缺陷的 skill（`/quick-fix`），不满足快修条件时整理成交给 Multica 缺陷修复小队的任务描述；使用前链接或复制到 `~/.claude/skills/quick-fix/`。
 - `cursor/`：Cursor 配置预留目录。
 - `shared/`：多个 AI 工具共用的原则和模板。
 
