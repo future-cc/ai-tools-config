@@ -79,7 +79,8 @@ argument-hint: "<Figma 链接或 node-id> <要还原或修改的页面>"
 
 - Figma MCP：{{FIGMA_MCP}}
 - 运行与截图方式：{{RUN_AND_SCREENSHOT}}
-- 静态分析与测试命令：{{CHECK_COMMANDS}}
+- 静态分析与测试命令（生成时已实际运行确认）：{{CHECK_COMMANDS}}
+- 版本管理：{{VCS}}
 
 ## 7. 项目特有规则
 
