@@ -33,7 +33,7 @@
 | 测试总管 | `claude-sonnet-5-5` | Claude |
 | 测试分析师 | `claude-sonnet-5-5` | Claude |
 | 测试用例师 | `claude-sonnet-5-5` | Claude |
-| 测试执行员 | `claude-haiku-4-5-20251001` | Claude |
+| 测试执行员 | `claude-sonnet-5-5` | Claude |
 | 测试排查员 | `claude-sonnet-5-5` | Claude |
 | 修复总管 | `claude-sonnet-5-5` | Claude |
 | 修复分析师 | `claude-opus-5-5` | Claude |
