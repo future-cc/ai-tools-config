@@ -53,7 +53,7 @@
 
 - 实施工程师的并发必须为 `1`，防止多个开发任务同时修改同一仓库（见 `agents/实施工程师.md` 的 `concurrency`）。
 - 测试执行员的并发必须为 `1`，一台设备同一时间只能跑一次测试（见 `agents/测试执行员.md` 的 `concurrency`）。
-- 测试执行员必须设置 `custom_args`（`--allowedTools` 放行 `exec-launch.py`、`exec-status.sh`、`multica issue wakeup` 等几条命令，加 `--add-dir` 工具包目录），否则无人值守时会因权限提示无人响应而被拦住（见 `agents/测试执行员.md`）。恢复时先把其中的工具包路径换成新电脑的路径，再用 `multica agent update <id> --custom-args '<JSON>'` 设置，并读回核对。
+- 测试执行员必须设置 `custom_args`（`--allowedTools` 放行 `exec-launch.py`、`exec-status.sh`、`multica issue wakeup`（已不再使用，可移除）等几条命令，加 `--add-dir` 工具包目录），否则无人值守时会因权限提示无人响应而被拦住（见 `agents/测试执行员.md`）。恢复时先把其中的工具包路径换成新电脑的路径，再用 `multica agent update <id> --custom-args '<JSON>'` 设置，并读回核对。
 - 修复工程师的并发必须为 `1`，防止多个修复任务同时修改同一仓库（见 `agents/修复工程师.md` 的 `concurrency`）。
 - 测试小队 5 个智能体的指令里写死了 maestro-testing-kit 的本机路径 `/Users/future/Documents/workspace/company_otherspace/test_workspace/maestro-testing-kit`。换电脑恢复时，要把指令里的这个路径全部换成新电脑上的路径；路径不存在时，智能体会停下并提醒用户。
 
