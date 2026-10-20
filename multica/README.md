@@ -15,6 +15,7 @@
 - `squads/`：四个小队的成员、角色和指引，文件名与 Multica 网页中的小队名一致。调研方案小队负责调研和选方案，输出 `HANDOFF.md`，用户回复“交给开发”后，同一任务改派给开发实施小队；开发实施小队以它为输入，由实施架构师做技术设计，再审核和执行（执行时含运行验证），手机 App 完成后，用户回复“交给测试”，同一任务改派给测试小队，测试总管以 `TEST_HANDOFF.md` 为输入。缺陷修复小队独立接单：一个任务修一个 bug，分析根因后经人工批准，先写失败的复现测试再做最小修复，独立审核后汇报；不自动交给其他小队，是否交给测试小队重测由用户决定。
 - `kit-scripts/`：maestro-testing-kit 里新增的两个脚本（脱离启动测试和检查状态）的备份，测试执行员依赖它们。
 - `workflow.md`：开发实施小队的工作流摘要，便于快速了解流程；具体规则以各智能体指令和小队指引为准。
+- `validation-2026-10-flutter-shop.md`：测试小队 + 缺陷修复小队端到端验证总结（发现的 bug、小队表现、环境陷阱、未验证项和待办）。
 - `restore-guide.md`：新电脑恢复步骤、安全规则和验证清单。
 
 ## 当前模型与运行时
@@ -52,6 +53,7 @@
 
 - 实施工程师的并发必须为 `1`，防止多个开发任务同时修改同一仓库（见 `agents/实施工程师.md` 的 `concurrency`）。
 - 测试执行员的并发必须为 `1`，一台设备同一时间只能跑一次测试（见 `agents/测试执行员.md` 的 `concurrency`）。
+- 测试执行员必须设置 `custom_args`（`--allowedTools` 放行 `exec-launch.py`、`exec-status.sh`、`multica issue wakeup` 等几条命令，加 `--add-dir` 工具包目录），否则无人值守时会因权限提示无人响应而被拦住（见 `agents/测试执行员.md`）。恢复时先把其中的工具包路径换成新电脑的路径，再用 `multica agent update <id> --custom-args '<JSON>'` 设置，并读回核对。
 - 修复工程师的并发必须为 `1`，防止多个修复任务同时修改同一仓库（见 `agents/修复工程师.md` 的 `concurrency`）。
 - 测试小队 5 个智能体的指令里写死了 maestro-testing-kit 的本机路径 `/Users/future/Documents/workspace/company_otherspace/test_workspace/maestro-testing-kit`。换电脑恢复时，要把指令里的这个路径全部换成新电脑上的路径；路径不存在时，智能体会停下并提醒用户。
 
